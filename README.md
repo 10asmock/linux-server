@@ -76,7 +76,7 @@ sudo pip install flask-seasurf
 - Enable mod_wsgi with ```sudo a2enmod wsgi```
 - Start the app server with ```sudo service apache2 start```
 
-### Clone the item catalog from GitHub
+### Setup WSGI files
 
 
 
