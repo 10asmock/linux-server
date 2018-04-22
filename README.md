@@ -61,6 +61,7 @@ Run the following:
 Run the following:
 ```
 sudo apt-get install apache2
+sudo apt-get install git
 sudo apt-get install libapache2-mod-wsgi python-dev
 sudo apt-get install python-psycopg2 python-flask
 sudo apt-get install python-sqlalchemy python-pip
@@ -69,6 +70,13 @@ sudo pip install requests
 sudo pip install httplib2
 sudo pip install flask-seasurf
 ```
+
+### Enable mod_wsgi
+
+- Enable mod_wsgi with ```sudo a2enmod wsgi```
+- Start the app server with ```sudo service apache2 start```
+
+### Clone the item catalog from GitHub
 
 
 
