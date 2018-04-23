@@ -24,12 +24,17 @@ Generally, most users need to access the server using ```ssh -i "linux-project.p
 - Once you've generated the keys, go to the grader directory(```/home/grader/.ssh```) and run ```sudo nano authorized_keys``` and paste the public key generated from the local machine.
 - You can login to grader by doing ```ssh grader@PublicDNS -i ~/.ssh/add_ssh_key_gen_here.rsa```
 
+### Prevent Host Error 
+
+- Run ```sudo nano /etc/hosts```
+- Add this line ```127.0.0.1 ip-52-14-242-245```
+
 ### Disable root login
 
 - Run ```sudo nano /etc/ssh/sshd_config```
 - Change ```PermitRootLogin prohibit-password``` to ```PermitRootLogin no```
 - Run ```sudo service ssh restart```
-- You are now unable to login via root and must login as ```ubuntu``` or ```grader```.
+- You are now unable to login via root and must login as ```grader```.
 
 ### Update all packages
 
@@ -78,7 +83,8 @@ sudo pip install flask-seasurf
 
 ### Setup WSGI files
 
-
+- Do ```cd /var/www/```
+- Create a WSGI file named ```itemcatalog.wsgi``` in the path to the application directory
 
 
 
