@@ -101,5 +101,25 @@ application.secret_key='super_secret_key'
 
 ### Setup virtual host
 
+To set up the web server do ```sudo nano /etc/apache2/sites-available/itemcatalog.conf``` and paste the following:
 
+```
+Virtual Host file
+<VirtualHost *:80>
+     ServerName  52.14.242.245
+     ServerAdmin hegemon1984@gmail.com
+     WSGIScriptAlias / /var/www/itemcatalog/itemcatalog.wsgi
+     <Directory /var/www/itemcatalog>
+          Order allow,deny
+          Allow from all
+     </Directory>
+     #Allow Apache to deploy static content
+     <Directory /var/www/itemcatalog/static>
+        Order allow,deny
+        Allow from all
+     </Directory>
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      LogLevel warn
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 
