@@ -68,11 +68,10 @@ Run the following:
 sudo apt-get install apache2
 sudo apt-get install git
 sudo apt-get install libapache2-mod-wsgi python-dev
-sudo apt-get install python-psycopg2 python-flask
 sudo apt-get install python-sqlalchemy python-pip
-sudo pip install oauth2client
-sudo pip install requests
-sudo pip install httplib2
+sudo apt-get install python-pip python-flask python-sqlalchemy python-psycopg2
+sudo apt-get install postgresql
+sudo pip install oauth2client requests httplib2
 sudo pip install flask-seasurf
 ```
 
@@ -122,4 +121,52 @@ Virtual Host file
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
+
+### Clone repository
+
+- If you haven't already, do ```cd /var/www/itemcatalog```
+- ```sudo git clone https://github.com/10asmock/catalog-items.git itemcatalog```
+
+### Install Postgresql
+
+- Since we already installed postgresql, edit the .conf file by running ```sudo nano /etc/postgresql/9.5/pg_hba.conf```
+
+Do the following commands:
+
+```
+postgres=# CREATE USER catalog WITH PASSWORD 'catalog';
+postgres=# ALTER USER catalog CREATEDB;
+postgres=# CREATE DATABASE catalog WITH OWNER catalog;
+```
+
+Connect to the catalog database
+
+```
+\c
+catalog=# REVOKE ALL ON SCHEMA public FROM public;
+catalog=# GRANT ALL ON SCHEMA public TO catalog;
+```
+Exit postgres and postgres user
+
+``` 
+/q
+exit
+```
+
+Finally, we need to update itemcatalog.py and database_setup.py by creating a new engine connection: ```engine = create_engine('postgresql://catalog:catalog@localhost/catalog')```
+
+Run ```sudo python database_setup.py```
+
+### OAuth Client Login
+
+In order to set up OAuth, update itemcatalog.py path on client_id and oauth_flow:
+
+```
+CLIENT_ID = json.loads(
+    open('/var/www/itemcatalog/client_secrets.json', 'r').read())['web']['client_id']
+
+oauth_flow = flow_from_clientsecrets('/var/www/itemcatalog/client_secrets.json', scope='')
+```
+
 
