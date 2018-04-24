@@ -169,4 +169,12 @@ CLIENT_ID = json.loads(
 oauth_flow = flow_from_clientsecrets('/var/www/itemcatalog/client_secrets.json', scope='')
 ```
 
+### Sources
+
+[Steve Wooding](https://github.com/SteveWooding/fullstack-nanodegree-linux-server-config/blob/master/README.md)
+[Harushimo](https://github.com/harushimo/linux-server-configuration/blob/master/README.md)
+[rrjoson](https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md)
+[Alona Varshal](http://alonavarshal.com/flask/aws/python/2017/10/13/deploying-a-flask-web-app-on-lightsail-aws.html)
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+
 
