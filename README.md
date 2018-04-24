@@ -171,10 +171,10 @@ oauth_flow = flow_from_clientsecrets('/var/www/itemcatalog/client_secrets.json',
 
 ### Sources
 
-[Steve Wooding](https://github.com/SteveWooding/fullstack-nanodegree-linux-server-config/blob/master/README.md)
-[Harushimo](https://github.com/harushimo/linux-server-configuration/blob/master/README.md)
-[rrjoson](https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md)
-[Alona Varshal](http://alonavarshal.com/flask/aws/python/2017/10/13/deploying-a-flask-web-app-on-lightsail-aws.html)
-[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+[Steve Wooding](https://github.com/SteveWooding/fullstack-nanodegree-linux-server-config/blob/master/README.md)<br>
+[Harushimo](https://github.com/harushimo/linux-server-configuration/blob/master/README.md)<br>
+[rrjoson](https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md)<br>
+[Alona Varshal](http://alonavarshal.com/flask/aws/python/2017/10/13/deploying-a-flask-web-app-on-lightsail-aws.html)<br>
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)<br>
 
 
