@@ -3,7 +3,7 @@
 
 A Linux server built on Ubuntu and hosted by Amazon AWS. The server contains an item catalog with users with specific access rights and priviledges.
 
-If you wish to access this site, please visit http://.
+If you wish to access this site, please visit http://52.14.242.245.
 
 ## HOW TO USE
 
