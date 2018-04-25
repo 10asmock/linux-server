@@ -3,13 +3,13 @@
 
 A Linux server built on Ubuntu and hosted by Amazon AWS. The server contains an item catalog with users with specific access rights and priviledges.
 
-If you wish to access this site, please visit http://52.14.242.245.
+If you wish to access this site, please visit http://18.216.4.135.
 
 ## HOW TO USE
 
 ### Logging in
 
-Generally, most users need to access the server using ```ssh -i "linux-project.pem" ubuntu@ec2-52-14-242-245.us-east-2.compute.amazonaws.com```. However, for this project, I used the SSH client PuTTY and accessed my server by adding ```ubuntu@ec2-52-14-242-245.us-east-2.compute.amazonaws.com``` on ```Host Name (or IP address)``` found on the ```Session``` tab. Afterward, expand ```SSH``` --> ```Auth``` --> Click ```Browse``` and then I used a private ssh key to login as ```Ubuntu```.
+Generally, most users need to access the server using ```ssh -i "linux-project.pem" ubuntu@ec2-18-216-4-135.us-east-2.compute.amazonaws.com```. However, for this project, I used the SSH client PuTTY and accessed my server by adding ```ubuntu@ec2-18-216-4-135.us-east-2.compute.amazonaws.com``` on ```Host Name (or IP address)``` found on the ```Session``` tab. Afterward, expand ```SSH``` --> ```Auth``` --> Click ```Browse``` and then I used a private ssh key to login as ```Ubuntu```.
 
 ### Add users
 
@@ -27,7 +27,7 @@ Generally, most users need to access the server using ```ssh -i "linux-project.p
 ### Prevent Host Error 
 
 - Run ```sudo nano /etc/hosts```
-- Add this line ```127.0.0.1 ip-52-14-242-245```
+- Add this line ```127.0.0.1 ip-18-216-4-135```
 
 ### Disable root login
 
@@ -104,7 +104,7 @@ To set up the web server do ```sudo nano /etc/apache2/sites-available/itemcatalo
 ```
 Virtual Host file
 <VirtualHost *:80>
-     ServerName  52.14.242.245
+     ServerName  18.216.4.135
      ServerAdmin hegemon1984@gmail.com
      WSGIScriptAlias / /var/www/itemcatalog/itemcatalog.wsgi
      <Directory /var/www/itemcatalog>
