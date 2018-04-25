@@ -138,9 +138,9 @@ Virtual Host file
 Do the following commands:
 
 ```
-postgres=# CREATE USER catalog WITH PASSWORD 'catalog';
-postgres=# ALTER USER catalog CREATEDB;
-postgres=# CREATE DATABASE catalog WITH OWNER catalog;
+postgres=# CREATE USER itemcatalog WITH PASSWORD 'itemcatalog';
+postgres=# ALTER USER itemcatalog CREATEDB;
+postgres=# CREATE DATABASE itemcatalog WITH OWNER itemcatalog;
 ```
 
 Connect to the catalog database
@@ -148,7 +148,7 @@ Connect to the catalog database
 ```
 \c
 catalog=# REVOKE ALL ON SCHEMA public FROM public;
-catalog=# GRANT ALL ON SCHEMA public TO catalog;
+catalog=# GRANT ALL ON SCHEMA public TO itemcatalog;
 ```
 Exit postgres and postgres user
 
@@ -157,7 +157,7 @@ Exit postgres and postgres user
 exit
 ```
 
-Finally, we need to update itemcatalog.py and database_setup.py by creating a new engine connection: ```engine = create_engine('postgresql://catalog:catalog@localhost/catalog')```
+Finally, we need to update itemcatalog.py and database_setup.py by creating a new engine connection: ```engine = create_engine('postgresql://itemcatalog:itemcatalog@localhost/itemcatalog')```
 
 Run ```sudo python database_setup.py```
 
