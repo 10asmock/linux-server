@@ -68,7 +68,6 @@ Run the following:
 sudo apt-get install apache2
 sudo apt-get install git
 sudo apt-get install libapache2-mod-wsgi python-dev
-sudo apt-get install python-sqlalchemy python-pip
 sudo apt-get install python-pip python-flask python-sqlalchemy python-psycopg2
 sudo apt-get install postgresql
 sudo pip install oauth2client requests httplib2
