@@ -146,7 +146,7 @@ postgres=# CREATE DATABASE itemcatalog WITH OWNER itemcatalog;
 Connect to the catalog database
 
 ```
-\c
+\c itemcatalog
 catalog=# REVOKE ALL ON SCHEMA public FROM public;
 catalog=# GRANT ALL ON SCHEMA public TO itemcatalog;
 ```
