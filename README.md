@@ -16,11 +16,11 @@ Generally, most users need to access the server using ```ssh -i "linux-project.p
 - Next, you need to add users by doing ```sudo adduser grader```
 - Create a new file in sudoers by doing ```sudo nano /etc/sudoers.d/grader```
 - Add the following command ```grader ALL=(ALL:ALL) NOPASSWD:ALL```
-- Create a SSH directory for grader by doing ```cd grader``` and ```mkdir .ssh``` 
+- Create a SSH directory for grader by doing ```cd /home/grader``` and ```sudo mkdir .ssh``` 
 
 ### Creating SSH keys
 
-- Run ```ssh-keygen```. For this step, you can decide to add a password or leave it blank.
+- Run ```sudo ssh-keygen```. For this step, you can decide to add a password or leave it blank.
 - Once you've generated the keys, go to the grader directory(```/home/grader/.ssh```) and run ```sudo nano authorized_keys``` and paste the public key generated from the local machine.
 - You can login to grader by doing ```ssh grader@PublicDNS -i ~/.ssh/add_ssh_key_gen_here.rsa```
 
