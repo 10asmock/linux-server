@@ -153,7 +153,7 @@ catalog=# GRANT ALL ON SCHEMA public TO itemcatalog;
 Exit postgres and postgres user
 
 ``` 
-/q
+\q
 exit
 ```
 
@@ -167,9 +167,9 @@ In order to set up OAuth, update itemcatalog.py path on client_id and oauth_flow
 
 ```
 CLIENT_ID = json.loads(
-    open('/var/www/itemcatalog/client_secrets.json', 'r').read())['web']['client_id']
+    open('/var/www/itemcatalog/itemcatalog/client_secrets.json', 'r').read())['web']['client_id']
 
-oauth_flow = flow_from_clientsecrets('/var/www/itemcatalog/client_secrets.json', scope='')
+oauth_flow = flow_from_clientsecrets('/var/www/itemcatalog/itemcatalog/client_secrets.json', scope='')
 ```
 
 ### Sources
