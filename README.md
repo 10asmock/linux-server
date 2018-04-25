@@ -124,7 +124,7 @@ Virtual Host file
 
 ### Clone repository
 
-- If you haven't already, do ```cd /var/www/itemcatalog```
+- If you haven't already, do ```sudo mkdir /var/www/itemcatalog``` and ```cd``` into itemcatalog
 - ```sudo git clone https://github.com/10asmock/catalog-items.git itemcatalog```
 
 ### Install Postgresql
