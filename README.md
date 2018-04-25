@@ -129,7 +129,11 @@ Virtual Host file
 
 ### Install Postgresql
 
-- Since we already installed postgresql, edit the .conf file by running ```sudo nano /etc/postgresql/9.5/pg_hba.conf```
+- Since we already installed postgresql, check if remote connections are allowed by running ```sudo nano /etc/postgresql/9.5/main/pg_hba.conf```
+
+### Create database
+
+- Do ```sudo su - postgres```, type in ```psql``` as ```postgres``` user
 
 Do the following commands:
 
