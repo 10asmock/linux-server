@@ -85,16 +85,15 @@ sudo pip install flask-seasurf
 - Create a WSGI file named ```itemcatalog.wsgi``` in the path to the application directory
 - Add the following:
 ```
-WSGI file
-
+#!/usr/bin/python
 import sys
 import logging
-
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0, '/var/www/itemcatalog/itemcatalog')
+sys.path.insert(0,"/var/www/itemcatalog/itemcatalog")
 
-from application import app as application
+from itemcatalog import app as application
 application.secret_key='super_secret_key'
+
 ```
 
 ### Setup virtual host
@@ -107,12 +106,12 @@ Virtual Host file
      ServerName  18.216.4.135
      ServerAdmin hegemon1984@gmail.com
      WSGIScriptAlias / /var/www/itemcatalog/itemcatalog.wsgi
-     <Directory /var/www/itemcatalog>
+     <Directory /var/www/itemcatalog/itemcatalog>
           Order allow,deny
           Allow from all
      </Directory>
      #Allow Apache to deploy static content
-     <Directory /var/www/itemcatalog/static>
+     <Directory /var/www/itemcatalog/itemcatalog/static>
         Order allow,deny
         Allow from all
      </Directory>
